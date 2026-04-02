@@ -1,0 +1,143 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Login</title>
+    <link rel="stylesheet" href="./style.css" />
+  </head>
+  <body>
+    <main class="page">
+      <section class="card" aria-label="Login form">
+        <header class="card__header">
+          <div class="badge" aria-hidden="true">★</div>
+          <h1 class="title">Welcome back</h1>
+          <p class="subtitle">Log in to continue to your cozy corner.</p>
+        </header>
+
+        <form id="loginForm" class="form" novalidate>
+          <p id="formMessage" class="formMessage" role="status" aria-live="polite"></p>
+          <div class="field">
+            <label class="label" for="identity">Email or username</label>
+            <div class="control">
+              <input
+                id="identity"
+                name="identity"
+                class="input"
+                type="text"
+                inputmode="email"
+                autocomplete="username"
+                placeholder="you@example.com"
+                aria-describedby="identityError"
+                required
+              />
+            </div>
+            <p id="identityError" class="error" role="alert" aria-live="polite"></p>
+          </div>
+
+          <div class="search">
+            <div class="row" style="justify-content:flex-start">
+              <button id="findUserBtn" class="btn btn--small" type="button">
+                <span>Find account</span>
+                <span class="btn__sparkle" aria-hidden="true">✦</span>
+              </button>
+              <p class="hint" style="margin:0">Checks if an account exists for what you typed above.</p>
+            </div>
+            <div id="findUserStatus" class="searchStatus" aria-live="polite"></div>
+          </div>
+
+          <section
+            id="findUserCard"
+            class="userCard"
+            aria-label="User found"
+            aria-hidden="true"
+          >
+            <div class="userCard__avatar" id="findUserAvatar" aria-hidden="true"></div>
+            <div class="userCard__info">
+              <div class="userCard__name" id="findUserName">—</div>
+              <div class="userCard__meta" id="findUserEmail">—</div>
+            </div>
+            <div class="userCard__badge" aria-hidden="true">User Found ✓</div>
+          </section>
+
+          <div class="field">
+            <label class="label" for="password">Password</label>
+            <div class="control control--password">
+              <input
+                id="password"
+                name="password"
+                class="input"
+                type="password"
+                autocomplete="current-password"
+                placeholder="••••••••"
+                aria-describedby="passwordError"
+                required
+              />
+
+              <button
+                id="togglePassword"
+                class="iconBtn"
+                type="button"
+                aria-label="Show password"
+                aria-pressed="false"
+                title="Show password"
+              >
+                <!-- Inline SVG so no external assets needed -->
+                <svg class="icon" viewBox="0 0 24 24" aria-hidden="true">
+                  <path
+                    d="M12 5c5.5 0 9.7 4.1 11 7-1.3 2.9-5.5 7-11 7S2.3 14.9 1 12c1.3-2.9 5.5-7 11-7Zm0 2C7.8 7 4.4 10 3.2 12 4.4 14 7.8 17 12 17s7.6-3 8.8-5C19.6 10 16.2 7 12 7Zm0 2.2A2.8 2.8 0 1 1 9.2 12 2.8 2.8 0 0 1 12 9.2Z"
+                  />
+                </svg>
+              </button>
+            </div>
+            <p id="passwordError" class="error" role="alert" aria-live="polite"></p>
+          </div>
+
+          <div class="row">
+            <label class="checkbox">
+              <input id="remember" name="remember" type="checkbox" />
+              <span class="checkbox__box" aria-hidden="true"></span>
+              <span class="checkbox__label">Remember me</span>
+            </label>
+
+            <a class="link link--muted" href="#" id="forgotPassword">Forgot password?</a>
+          </div>
+
+          <button class="btn" type="submit">
+            <span>Log in</span>
+            <span class="btn__sparkle" aria-hidden="true">✦</span>
+          </button>
+
+          <div class="divider" role="separator" aria-label="Or continue with">
+            <span>or</span>
+          </div>
+
+          <div class="social">
+            <button class="socialBtn socialBtn--google" type="button">
+              <span class="socialBtn__icon" aria-hidden="true">G</span>
+              <span>Continue with Google</span>
+            </button>
+            <button class="socialBtn socialBtn--facebook" type="button">
+              <span class="socialBtn__icon" aria-hidden="true">f</span>
+              <span>Continue with Facebook</span>
+            </button>
+          </div>
+
+          <p class="footer">
+            New here?
+            <a class="link" href="./register.html" id="signupLink">Create an account</a>
+          </p>
+        </form>
+      </section>
+
+      <aside class="decor" aria-hidden="true">
+        <div class="blob blob--1"></div>
+        <div class="blob blob--2"></div>
+        <div class="dots"></div>
+      </aside>
+    </main>
+
+    <script src="./script.js"></script>
+    <script src="./transitions.js"></script>
+  </body>
+</html>

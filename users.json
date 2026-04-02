@@ -1,0 +1,18 @@
+{
+  "users": [
+    {
+      "id": "85546188-bbc3-4430-8003-cb794c8e6f3e",
+      "email": "caccuoc6@gmail.com",
+      "username": "sssss",
+      "passwordHash": "$2b$12$m46c4Z7HryvYRhRCx1u6BOd1bPDk47prGkc1cycBn6JEkhWoHsHEu",
+      "createdAt": "2026-04-02T15:07:13.135Z"
+    },
+    {
+      "id": "dcd41ca0-d537-42b4-a867-9d84acfb2962",
+      "email": "caccuoc672@gmail.com",
+      "username": "ichika",
+      "passwordHash": "$2b$12$bogHB4bYVk4wOORUgNhxCuMLjXz89e.0hGJ.m2kAt0ahBq4.0tEcu",
+      "createdAt": "2026-04-02T15:07:49.122Z"
+    }
+  ]
+}

@@ -1,0 +1,91 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Dashboard</title>
+    <link rel="stylesheet" href="./style.css" />
+  </head>
+  <body>
+    <main class="page">
+      <section class="card" aria-label="Dashboard">
+        <header class="card__header">
+          <div class="badge" aria-hidden="true">✓</div>
+          <h1 class="title">Dashboard</h1>
+          <p class="subtitle">You’re logged in (demo).</p>
+        </header>
+
+        <div class="form">
+          <p id="dashMessage" class="formMessage is-success" style="display:block">
+            Checking your session…
+          </p>
+
+          <div class="search">
+            <div class="field">
+              <label class="label" for="userQuery">Search users</label>
+              <div class="control control--search">
+                <input
+                  id="userQuery"
+                  class="input"
+                  type="text"
+                  autocomplete="off"
+                  placeholder="Email or username…"
+                  aria-describedby="searchHint"
+                />
+                <button id="searchBtn" class="btn btn--small" type="button">
+                  <span>Search</span>
+                  <span class="btn__sparkle" aria-hidden="true">✦</span>
+                </button>
+              </div>
+              <p id="searchHint" class="hint">Try your email or username from registration.</p>
+            </div>
+
+            <div id="searchStatus" class="searchStatus" aria-live="polite"></div>
+          </div>
+
+          <section
+            id="userFoundCard"
+            class="userCard"
+            aria-label="User found"
+            aria-hidden="true"
+          >
+            <div class="userCard__avatar" id="userAvatar" aria-hidden="true"></div>
+            <div class="userCard__info">
+              <div class="userCard__name" id="userName">—</div>
+              <div class="userCard__meta" id="userEmail">—</div>
+            </div>
+            <div class="userCard__badge" aria-hidden="true">User Found ✓</div>
+          </section>
+
+          <div class="field">
+            <label class="label" for="tokenPreview">JWT (stored in localStorage)</label>
+            <div class="control">
+              <textarea id="tokenPreview" class="input" rows="4" readonly></textarea>
+            </div>
+            <p class="error" aria-hidden="true"></p>
+          </div>
+
+          <button id="logoutBtn" class="btn" type="button">
+            <span>Log out</span>
+            <span class="btn__sparkle" aria-hidden="true">✦</span>
+          </button>
+
+          <p class="footer">
+            Back to
+            <a class="link" href="./index.html">Login</a>
+          </p>
+        </div>
+      </section>
+
+      <aside class="decor" aria-hidden="true">
+        <div class="blob blob--1"></div>
+        <div class="blob blob--2"></div>
+        <div class="dots"></div>
+      </aside>
+    </main>
+
+    <script src="./dashboard.js"></script>
+    <script src="./transitions.js"></script>
+  </body>
+</html>
+

@@ -1,0 +1,17 @@
+{
+  "name": "ansel-login-backend",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Express backend for the login frontend",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js"
+  },
+  "dependencies": {
+    "bcrypt": "^6.0.0",
+    "cors": "^2.8.5",
+    "express": "^4.21.2",
+    "firebase": "^12.11.0",
+    "jsonwebtoken": "^9.0.2"
+  }
+}

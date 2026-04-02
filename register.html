@@ -1,0 +1,110 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Register</title>
+    <link rel="stylesheet" href="./style.css" />
+  </head>
+  <body>
+    <main class="page">
+      <section class="card" aria-label="Register form">
+        <header class="card__header">
+          <div class="badge" aria-hidden="true">✿</div>
+          <h1 class="title">Create account</h1>
+          <p class="subtitle">A few details and you’re in.</p>
+        </header>
+
+        <form id="registerForm" class="form" novalidate>
+          <p id="formMessage" class="formMessage" role="status" aria-live="polite"></p>
+
+          <div class="field">
+            <label class="label" for="email">Email</label>
+            <div class="control">
+              <input
+                id="email"
+                name="email"
+                class="input"
+                type="email"
+                inputmode="email"
+                autocomplete="email"
+                placeholder="you@example.com"
+                aria-describedby="emailError"
+                required
+              />
+            </div>
+            <p id="emailError" class="error" role="alert" aria-live="polite"></p>
+          </div>
+
+          <div class="field">
+            <label class="label" for="username">Username</label>
+            <div class="control">
+              <input
+                id="username"
+                name="username"
+                class="input"
+                type="text"
+                autocomplete="username"
+                placeholder="cute_name"
+                aria-describedby="usernameError"
+                required
+              />
+            </div>
+            <p id="usernameError" class="error" role="alert" aria-live="polite"></p>
+          </div>
+
+          <div class="field">
+            <label class="label" for="password">Password</label>
+            <div class="control control--password">
+              <input
+                id="password"
+                name="password"
+                class="input"
+                type="password"
+                autocomplete="new-password"
+                placeholder="••••••••"
+                aria-describedby="passwordError"
+                required
+              />
+              <button
+                id="togglePassword"
+                class="iconBtn"
+                type="button"
+                aria-label="Show password"
+                aria-pressed="false"
+                title="Show password"
+              >
+                <svg class="icon" viewBox="0 0 24 24" aria-hidden="true">
+                  <path
+                    d="M12 5c5.5 0 9.7 4.1 11 7-1.3 2.9-5.5 7-11 7S2.3 14.9 1 12c1.3-2.9 5.5-7 11-7Zm0 2C7.8 7 4.4 10 3.2 12 4.4 14 7.8 17 12 17s7.6-3 8.8-5C19.6 10 16.2 7 12 7Zm0 2.2A2.8 2.8 0 1 1 9.2 12 2.8 2.8 0 0 1 12 9.2Z"
+                  />
+                </svg>
+              </button>
+            </div>
+            <p id="passwordError" class="error" role="alert" aria-live="polite"></p>
+          </div>
+
+          <button class="btn" type="submit">
+            <span>Create account</span>
+            <span class="btn__sparkle" aria-hidden="true">✦</span>
+          </button>
+
+          <p class="footer">
+            Already have an account?
+            <a class="link" href="./index.html">Log in</a>
+          </p>
+        </form>
+      </section>
+
+      <aside class="decor" aria-hidden="true">
+        <div class="blob blob--1"></div>
+        <div class="blob blob--2"></div>
+        <div class="dots"></div>
+      </aside>
+    </main>
+
+    <script src="./register.js"></script>
+    <script src="./transitions.js"></script>
+  </body>
+</html>
+
